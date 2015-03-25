@@ -20,6 +20,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = NSUserDefaults.standardUserDefaults()
+        redSlider.value = defaults.floatForKey("red")
+        greenSlider.value = defaults.floatForKey("green")
+        blueSlider.value = defaults.floatForKey("blue")
+        
+        
         view.addSubview(boxView)
         //boxView.backgroundColor = UIColor.blackColor()
         boxView.layer.borderColor = UIColor.blackColor().CGColor
@@ -31,6 +37,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "openColor"){
+            let newViewController = segue.destinationViewController as UIViewController
+            newViewController.view.backgroundColor = boxView.backgroundColor
+        }
+    }
 
     @IBAction func updateBackgroundColor() {
         let red = CGFloat(redSlider.value)
@@ -38,7 +51,12 @@ class ViewController: UIViewController {
         let blue  = CGFloat(blueSlider.value)
         
         boxView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
-    
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setFloat(redSlider.value, forKey: "red")
+        defaults.setFloat(greenSlider.value, forKey: "green")
+        defaults.setFloat(blueSlider.value, forKey: "blue")
+        defaults.synchronize()
     
     }
 
