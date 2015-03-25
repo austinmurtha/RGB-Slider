@@ -17,21 +17,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="E7w-K0-DDi">
-                                <rect key="frame" x="14" y="233" width="292" height="31"/>
+                                <rect key="frame" x="9" y="274" width="292" height="31"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="updateBackgroundColor" destination="vXZ-lx-hvc" eventType="valueChanged" id="KZp-Wd-QgT"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-cA-GnA">
-                                <rect key="frame" x="14" y="316" width="292" height="31"/>
+                                <rect key="frame" x="9" y="350" width="292" height="31"/>
                                 <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="updateBackgroundColor" destination="vXZ-lx-hvc" eventType="valueChanged" id="WZ1-42-GC6"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Eet-pl-DI4">
-                                <rect key="frame" x="14" y="396" width="292" height="31"/>
+                                <rect key="frame" x="9" y="428" width="292" height="31"/>
                                 <connections>
                                     <action selector="updateBackgroundColor" destination="vXZ-lx-hvc" eventType="valueChanged" id="weV-9B-Vb6"/>
                                 </connections>
@@ -41,7 +41,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAZ-pp-bWa">
-                                <rect key="frame" x="137" y="459" width="46" height="30"/>
+                                <rect key="frame" x="137" y="512" width="46" height="30"/>
                                 <state key="normal" title="Open">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,6 +49,24 @@
                                     <segue destination="OmT-Po-QOh" kind="show" identifier="openColor" id="8KH-7w-tYZ"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Value" translatesAutoresizingMaskIntoConstraints="NO" id="U0o-fK-vCg">
+                                <rect key="frame" x="56" y="466" width="198" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Value" translatesAutoresizingMaskIntoConstraints="NO" id="7TV-8N-fAd">
+                                <rect key="frame" x="56" y="312" width="198" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Value" translatesAutoresizingMaskIntoConstraints="NO" id="XAN-D6-LuX">
+                                <rect key="frame" x="56" y="390" width="198" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -56,9 +74,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="blueSlider" destination="Eet-pl-DI4" id="7Cg-RG-S6t"/>
+                        <outlet property="blueValue" destination="U0o-fK-vCg" id="93p-a7-X7V"/>
                         <outlet property="boxView" destination="krN-ix-FLx" id="FhU-Sx-Vg5"/>
                         <outlet property="greenSlider" destination="cYP-cA-GnA" id="vWJ-d9-CBa"/>
+                        <outlet property="greenValue" destination="XAN-D6-LuX" id="QtT-c6-Dsx"/>
                         <outlet property="redSlider" destination="E7w-K0-DDi" id="eXi-2m-rXF"/>
+                        <outlet property="redValue" destination="7TV-8N-fAd" id="6M9-yB-AJp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -76,6 +97,17 @@
                     <view key="view" contentMode="scaleToFill" id="MUX-mP-xU4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4t-rM-uQc">
+                                <rect key="frame" x="137" y="414" width="48" height="30"/>
+                                <state key="normal" title="Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sFm-dl-Ial" kind="show" identifier="picture" id="Kr4-PF-iO2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.21358449835526316" green="0.20872738486842105" blue="0.38854337993421051" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -83,6 +115,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ON4-68-aRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1706" y="483"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wyj-UI-Hb9">
+            <objects>
+                <viewController id="sFm-dl-Ial" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ym-vn-dZ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ou5-De-XM8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IuS-bz-K5h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_0750.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="9JS-M9-Sai">
+                                <rect key="frame" x="0.0" y="11" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hwz-Gx-gJz"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2L-g9-MPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2214" y="483"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w2k-4H-cOp">
@@ -103,4 +160,7 @@
             <point key="canvasLocation" x="347" y="483"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IMG_0750.JPG" width="3264" height="2448"/>
+    </resources>
 </document>

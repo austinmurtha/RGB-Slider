@@ -13,6 +13,7 @@
 		D9D0F62A1AC253F80001E6F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D0F6291AC253F80001E6F1 /* Images.xcassets */; };
 		D9D0F62D1AC253F80001E6F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D0F62B1AC253F80001E6F1 /* LaunchScreen.xib */; };
 		D9D0F6391AC253F90001E6F1 /* RGB_SliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D0F6381AC253F90001E6F1 /* RGB_SliderTests.swift */; };
+		D9D0F6431AC351D80001E6F1 /* IMG_0750.JPG in Resources */ = {isa = PBXBuildFile; fileRef = D9D0F6421AC351D80001E6F1 /* IMG_0750.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		D9D0F6321AC253F90001E6F1 /* RGB SliderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RGB SliderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D0F6371AC253F90001E6F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9D0F6381AC253F90001E6F1 /* RGB_SliderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGB_SliderTests.swift; sourceTree = "<group>"; };
+		D9D0F6421AC351D80001E6F1 /* IMG_0750.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0750.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		D9D0F61F1AC253F80001E6F1 /* RGB Slider */ = {
 			isa = PBXGroup;
 			children = (
+				D9D0F6421AC351D80001E6F1 /* IMG_0750.JPG */,
 				D9D0F6221AC253F80001E6F1 /* AppDelegate.swift */,
 				D9D0F6241AC253F80001E6F1 /* ViewController.swift */,
 				D9D0F6261AC253F80001E6F1 /* Main.storyboard */,
@@ -195,6 +198,7 @@
 				D9D0F6281AC253F80001E6F1 /* Main.storyboard in Resources */,
 				D9D0F62D1AC253F80001E6F1 /* LaunchScreen.xib in Resources */,
 				D9D0F62A1AC253F80001E6F1 /* Images.xcassets in Resources */,
+				D9D0F6431AC351D80001E6F1 /* IMG_0750.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

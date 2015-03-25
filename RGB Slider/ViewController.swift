@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
+    @IBOutlet weak var redValue: UITextView!
+    @IBOutlet weak var greenValue: UITextView!
+    @IBOutlet weak var blueValue: UITextView!
     
     @IBOutlet weak var boxView: UIView!
     
@@ -43,12 +46,24 @@ class ViewController: UIViewController {
             let newViewController = segue.destinationViewController as UIViewController
             newViewController.view.backgroundColor = boxView.backgroundColor
         }
+        
+        if (segue.identifier == "blankView"){
+            let newViewController = segue.destinationViewController as UIViewController
+            newViewController.view.backgroundColor = UIColor.whiteColor()
+        }
+        
     }
 
     @IBAction func updateBackgroundColor() {
         let red = CGFloat(redSlider.value)
         let green = CGFloat(greenSlider.value)
         let blue  = CGFloat(blueSlider.value)
+        println(redSlider.value)
+        //self.foreignCurrencyOutput.text = String(format:"%.3f", finalAmount)
+        
+        redValue.text = String(format:"%.3f", redSlider.value)
+        greenValue.text = String(format:"%.3f", greenSlider.value)
+        blueValue.text = String(format:"%.3f", blueSlider.value)
         
         boxView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
         
